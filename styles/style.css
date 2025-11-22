@@ -1,4 +1,24 @@
 body {
-    margin: 0;
-    background-color: red
-} 
+  margin: 0;
+}
+
+.header {
+  background: url("../assets/images/background.png");
+  background-size: cover;
+  width: auto;
+  height: 300px;
+}
+
+.list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container li {
+  border: 2px solid yellow;
+}
+
+.menu-container {
+  border: 2px solid red;
+}
