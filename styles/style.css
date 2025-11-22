@@ -15,10 +15,25 @@ body {
   flex-direction: column;
 }
 
+
+/*FIXME: Remove when done. Visual aid. */
 .list-container li {
-  border: 2px solid yellow;
+  padding: 20px;
 }
 
+.menu-desc-wrapper {
+  display: inline-block;
+}
+
+
+/*FIXME: Remove when done. Visual aid. */
 .menu-container {
   border: 2px solid red;
+  
+}
+
+.menu-container img {
+  width: 100px;
+  height: 100px;
+  margin: 0 20px 0 0;
 }
