@@ -15,8 +15,6 @@ body {
   flex-direction: column;
 }
 
-
-/*FIXME: Remove when done. Visual aid. */
 .list-container li {
   padding: 20px;
 }
@@ -25,15 +23,28 @@ body {
   display: inline-block;
 }
 
+.menu-desc-wrapper p, h3 {
+  margin: 5px 0;
+}
 
-/*FIXME: Remove when done. Visual aid. */
-.menu-container {
-  border: 2px solid red;
-  
+.item-title {
+  font-weight: 400;
+}
+
+.item-desc {
+  font-size: .81em;
+  font-weight: 200;
+  color: darkgrey;
+}
+
+.item-cost {
+  font-weight: 500;
+  color: #000;
+  letter-spacing: -1px;
 }
 
 .menu-container img {
-  width: 100px;
-  height: 100px;
-  margin: 0 20px 0 0;
+  width: 60px;
+  height: 60px;
+  margin: 0 40px 0 0;
 }
