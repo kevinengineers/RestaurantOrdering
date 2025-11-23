@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Roboto regular', Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -28,7 +29,7 @@ body {
 }
 
 .item-title {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .item-desc {
@@ -47,4 +48,52 @@ body {
   width: 60px;
   height: 60px;
   margin: 0 40px 0 0;
+}
+
+.menu-item-container {
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+  width: 75%;
+}
+
+.item-add-btn {
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  font-size: 20px;
+  font-weight: 200;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  bottom: 35px;
+}
+
+.order-title {
+  text-align: center;
+  margin: 30px 0 0 0;
+  font-weight: 200;
+
+}
+
+.cart-container {
+  list-style: none;
+  margin: 40px;
+  padding: 0;
+  width: 550px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin: 2px;
+}
+
+.total {
+  border-top: 2px solid grey;
+  padding-top: 18px;
 }
