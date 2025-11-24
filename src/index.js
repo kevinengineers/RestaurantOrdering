@@ -12,6 +12,8 @@ document.addEventListener("click", function(e) {
     addMenuItemToCart(e.target.dataset.menuitem);
   } else if (e.target.id === "remove-item") {
     removeMenuItem(e.target.dataset.uuid);
+  } else if (e.target.id === 'submit-btn') {
+    alert('complete order')
   }
 });
 

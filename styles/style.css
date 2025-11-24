@@ -115,3 +115,41 @@ body {
   width: 40%;
   margin: 0 auto;
 }
+
+.modal {
+  box-shadow: 0 1px 1px #000;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  text-align: center;
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  display: none;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+}
+
+.modal input {
+  margin: 10px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="submit"] {
+  background-color: #10B981;
+  color: white;
+}
+
