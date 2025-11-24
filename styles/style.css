@@ -97,3 +97,21 @@ body {
   border-top: 2px solid grey;
   padding-top: 18px;
 }
+
+#remove-item {
+  border: none;
+  background-color: #fff;
+  color: red;
+}
+
+.submit-order-btn {
+  display: block;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #10B981;
+  border: none;
+  height: 20px;
+  width: 40%;
+  margin: 0 auto;
+}
