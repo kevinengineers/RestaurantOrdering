@@ -67,13 +67,14 @@
     </button>
   </section>
   <section class="modal-container">
-    <div class="modal">
+    <div class="modal toggle-modal" id="modal">
       <h1>Enter card details</h1>
+        <button type="button" id="close-modal">x</button>
       <form>
         <input type="text" name="customerName" placeholder="Enter your name" id="customer-name" required />
         <input type="number" name="cardNumber" placeholder="Enter card number" />
         <input type="number" name="ccv" placeholder="Enter CCV" required />
-        <input type="submit" name="submit" value="Pay" required />
+        <input type="submit" name="submit" value="Pay" id="sumbit-order" required />
       </form>
     </div>
   </section>

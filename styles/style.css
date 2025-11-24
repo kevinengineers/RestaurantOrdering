@@ -114,6 +114,7 @@ body {
   height: 20px;
   width: 40%;
   margin: 0 auto;
+  position: relative;
 }
 
 .modal {
@@ -126,7 +127,6 @@ body {
   position: absolute;
   top: 30%;
   left: 5%;
-  display: none;
 }
 
 .modal form {
@@ -153,3 +153,16 @@ input[type="submit"] {
   color: white;
 }
 
+.toggle-modal {
+  display: none;
+}
+
+#close-modal {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  border-radius: 5px;
+  color: red;
+  width: 20px;
+}

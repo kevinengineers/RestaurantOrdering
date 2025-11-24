@@ -1,3 +1,4 @@
+const modal = document.getElementById("modal");
 let userShoppingCart = [];
 let cartTotal = 0;
 let menuPrices = {
@@ -12,8 +13,10 @@ document.addEventListener("click", function(e) {
     addMenuItemToCart(e.target.dataset.menuitem);
   } else if (e.target.id === "remove-item") {
     removeMenuItem(e.target.dataset.uuid);
-  } else if (e.target.id === 'submit-btn') {
-    alert('complete order')
+  } else if (e.target.id === "submit-btn") {
+    modal.classList.toggle("toggle-modal");
+  } else if (e.target.id === "close-modal") {
+    modal.classList.toggle("toggle-modal");
   }
 });
 
@@ -73,9 +76,10 @@ function renderCart() {
 function removeMenuItem(buttonUuid) {
   userShoppingCart = userShoppingCart.filter(function(item) {
     if (item.uid === buttonUuid) {
-      cartTotal -= item.price
+      cartTotal -= item.price;
     }
     return item.uid !== buttonUuid;
   });
   renderCart();
 }
+
