@@ -1,41 +1,45 @@
 let userShoppingCart = [];
-let cartTotal = 0
+let cartTotal = 0;
+let menuPrices = {
+  Pizza: 14,
+  Hamburger: 12,
+  Beer: 12,
+};
 const cartContainer = document.getElementById("cart-container");
 
 document.addEventListener("click", function(e) {
   if (e.target.dataset.menuitem) {
     addMenuItemToCart(e.target.dataset.menuitem);
-  } else if (e.target.id === 'remove-item') {
-    removeMenuItem(e.target.dataset.uuid)
+  } else if (e.target.id === "remove-item") {
+    removeMenuItem(e.target.dataset.uuid);
   }
-
 });
 
 function addMenuItemToCart(cartItem) {
   let item = {
-    "menuItem": cartItem,
-    "uid": crypto.randomUUID()
-  }
+    menuItem: cartItem,
+    uid: crypto.randomUUID(),
+    price: menuPrices[cartItem],
+  };
 
   switch (cartItem) {
     case "Pizza":
       userShoppingCart.push(item);
-      cartTotal += 14
+      cartTotal += item.price;
       break;
     case "Hamburger":
       userShoppingCart.push(item);
-      cartTotal += 12
+      cartTotal += item.price;
       break;
     case "Beer":
       userShoppingCart.push(item);
-      cartTotal += 12
+      cartTotal += item.price;
       break;
 
     default:
       break;
   }
 
-  console.log(userShoppingCart)
   renderCart();
 }
 
@@ -49,15 +53,12 @@ function renderCart() {
   `;
 
   userShoppingCart.map(function(menuItemAdded) {
-    let menuItemPrice =
-      menuItemAdded.menuItem === 'Pizza' ? 14 : 12
-
     newHtml += `
       <li class="cart-item">
         <span>${menuItemAdded.menuItem}<button type="button" 
           id="remove-item" 
           data-uuid="${menuItemAdded.uid}">remove</button></span>
-        <span>$${menuItemPrice}</span>
+        <span>$${menuItemAdded.price}</span>
       </li>
 
     `;
@@ -68,6 +69,11 @@ function renderCart() {
 }
 
 function removeMenuItem(buttonUuid) {
-  userShoppingCart = userShoppingCart.filter(item => item.uid !== buttonUuid)
-  renderCart()
+  userShoppingCart = userShoppingCart.filter(function(item) {
+    if (item.uid === buttonUuid) {
+      cartTotal -= item.price
+    }
+    return item.uid !== buttonUuid;
+  });
+  renderCart();
 }
